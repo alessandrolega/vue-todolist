@@ -20,7 +20,7 @@
                 <ul class="list-group list-group-flush" v-if="todoList.length > 0">
                     <li v-for="(element,index) in todoList" class="list-group-item d-flex justify-content-between">
                         <span @click="todoComplete(index)" :class="(todoList[index].done == true) ? 'text-decoration-line-through' : ''" class="cursor-pointer">{{index}} | {{element.text}}</span>
-                        <i class="fa-solid fa-xmark text-danger"></i>
+                        <i class="fa-solid fa-xmark text-danger cursor-pointer fa-2x" @click="removeItem(index)"></i>
                     </li>
                   </ul>
                   <h2 v-else>Non ci sono elementi nella todoList</h2>
