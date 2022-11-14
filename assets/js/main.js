@@ -17,6 +17,9 @@ var app = new Vue({
         todoComplete(index){
             this.todoList[index].done = true;
 
+        },
+        removeItem(index){
+            this.todoList.splice(index, 1);
         }
     }
   })
